@@ -1,0 +1,117 @@
+<div>
+
+<h2>Requirements</h2>
+<ol>
+    <li>jQuery</li>
+    <li>Bootstrap 4</li>
+    <li>template.js file</li>
+    <li>Template files</li>
+    <li>Structure as below</li>
+</ol>
+<h2>Page Structure</h2>
+    <p>
+        Every page is separated into several parts, each part is loaded in a main page at runtime to form a final page viewable to the end user.
+    </p>
+    <p>
+        These parts can be as below.
+    </p>
+    <ol>
+        <li>The page itself which will dynamically combine all template and data files and will be called by the user</li>
+        <li>Body template file
+            <ul>
+                <li>The template files are loaded in two stages, initially a base template is loaded which then loads all the rest of the template files</li>
+                <li>The body template file is the base template file</li>
+            </ul>
+        </li>
+        <li>head template file
+            <ul>
+                <li>Contains the contents of the &lt;head&gt;; usually the css files and html configurations</li>
+            </ul>
+        </li>
+        <li>nav template file
+            <ul>
+                <li>Contains the top navigation html, you can edit it to add/remove buttons and links</li>
+            </ul>
+        </li>
+        <li>footer template file
+            <ul>
+                <li>Contains the footer of the pages</li>
+            </ul>
+        </li>
+        <li>Page Content file
+            <ul>
+                <li>Each page should have its own content file and contains the actual data content of the page</li>
+            </ul>
+        </li>
+        <li>template.js file
+            <ul>
+                <li>It contains the jQuery code to combine all files and show a final page to user.</li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <h2>Directory Structure</h2>
+    <p>
+        All the above page parts are saved in several directories as below.
+    </p>
+    <ol>
+        <li>css and js
+            <ul>
+                <li>Contains the css style files in css and javascript files in js directory</li>
+            </ul>
+        </li>
+        <li>data
+            <ul>
+                <li>Contains the files for data part of the pages</li>
+            </ul>
+        </li>
+        <li>pages
+            <ul>
+                <li>The main pages that are available to the user, these pages contain the javascript to load their content at runtime from data and template directories</li>
+            </ul>
+        </li>
+        <li>template
+            <ul>
+                <li>It contain all the template files</li>
+            </ul>
+        </li>
+        <li>index.html
+            <ul>
+                <li>The index page to load the website</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>How to use</h2>
+    <p>
+        The template can be used by editing files at minimum four places
+    </p>
+    <ol>
+        <li>Navigation Menu
+            <ul>
+                <li>You have to edit the template/nav.html to update it to have your required links in the top navigation bar</li>
+            </ul>
+        </li>
+
+        <li>Footer
+            <ul>
+                <li>You have to edit the template/footer.html to update it to have a footer for your website</li>
+            </ul>
+        </li>
+
+        <li>main pages
+            <ul>
+                <li>The main pages are linked to the navigation links, when loaded they load the content from data directory and template components from template directory, You have to update the file names according to you requirements and then name of data page to be loaded in the javascript of these pages</li>
+            </ul>
+        </li>
+
+        <li>data pages
+            <ul>
+                <li>data pages are loaded by main pages in page directory as the page content. After editing the pages in pages directory you have to make/update data page in data directory, remember that the content of the page has to be included in a outer div component</li>
+            </ul>
+        </li>
+
+    </ol>    
+
+</div>
